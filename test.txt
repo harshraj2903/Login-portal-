@@ -1,0 +1,92 @@
+<?php
+
+$hostName = "localhost";
+$dbUser = "root";
+$dbPassword = "";
+$dbName = "login_register";
+$conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Get the verification code from the URL
+$verificationCode = $_GET['code'];
+
+// Query to find the user with the provided verification code
+$sql = "SELECT * FROM users WHERE verification_code = '$verificationCode' AND verified = 0";
+$result = mysqli_query($conn, $sql);
+
+// Check if a user with the provided verification code exists
+if (mysqli_num_rows($result) > 0) {
+    // Update the 'verified' column to 1
+    $updateSql = "UPDATE users SET verified = 1 WHERE verification_code = '$verificationCode'";
+    if (mysqli_query($conn, $updateSql)) {
+        echo "Email verification successful. You can now <a href='login.php'>login</a> to your account.";
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+    }
+} else {
+    echo "Invalid verification code or the account is already verified.";
+}
+
+// ... (previous code)
+
+// Check if a user with the provided verification code exists
+if (mysqli_num_rows($result) > 0) {
+    // Update the 'verified' column to 1
+    $updateSql = "UPDATE users SET verified = 1 WHERE verification_code = '$verificationCode'";
+    if (mysqli_query($conn, $updateSql)) {
+        echo "Email verification successful. You can now <a href='login.php'>login</a> to your account.";
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+    }
+} else {
+    echo "Invalid verification code or the account is already verified.";
+}
+
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+                <?php
+
+
+                $token = $_GET['token'];
+
+                echo "<form method='post' action='update_password.php'>";
+                echo "<input type='hidden' name='token' value='$token'>";
+                echo "<label for='new_password'>Enter your new password:</label>";
+                echo "<input type='password' id='new_password' name='new_password' required>";
+                echo "<button type='submit' name='submit'>Update Password</button>";
+                echo "</form>";
+                ?>
+
+
+
+
+
+
+    <div>
+        <?php
+        // Get the email from the URL
+        $email = $_GET['email'];
+
+        // Display a form for the user to enter the OTP
+        echo "<h2>Enter OTP to Verify Email</h2>";
+        echo "<form action='verify.php' method='post'>";
+        echo "<input type='hidden' name='email' value='$email'>";
+        echo "<label for='otp'>Enter OTP:</label>";
+        echo "<input type='text' id='otp' name='otp' required>";
+        echo "<input type='submit' name='submit'>Verify</input>";
+        echo "</form>";
+        ?>
+    </div>

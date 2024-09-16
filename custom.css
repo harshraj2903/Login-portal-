@@ -1,0 +1,24 @@
+/* Custom CSS */
+
+/* Styles for the page2 content */
+#page2 {
+    padding: 20px;
+    background-color: rgba(29, 26, 26, 0.679);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/*ANURAG SINHA
+/*INTERN @SAIL 2023*/
+#page2 h1 {
+    font-size: 28px;
+    color: #dcd7d7cd;
+    margin-bottom: 10px;
+}
+
+#page2 h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff7a;
+}
+
+/* Additional custom styles can be added here */

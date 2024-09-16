@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(245, 240, 240);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: auto;
+}
+
+#nav {
+    width: 100%;
+    height: 80px; /* Fixed height for the navbar */
+    background-color: rgb(0, 0, 0); /* Solid and opaque background color */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px; /* Corrected the padding syntax */
+    position: fixed;
+    z-index: 99;
+    gap: 40px;
+    box-shadow: 6px 6px 6prgba(226, 221, 221, 0.327);
+    border: 3px solid rgba(0, 0, 0, 0.488); /* Add a border for 3D effect */
+}
+
+
+
+#nav img {
+    height: 120px; /* Increase the height to make it slightly larger than the navbar */
+    filter: drop-shadow(15px 15px 15px rgba(52, 52, 52, 0.7));
+    border-radius: 10px; /* Add rounded corners */
+}
+
+#nav h4 {
+    position: relative;
+    color: #ffffff;
+    z-index: 0;
+    margin: 20px; /* Added 'px' to specify margin value */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: transform 0.2s, box-shadow 0.2s, font-size 0.2s; /* Add transitions */
+}
+
+#nav h4:hover, #nav h4 a:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a bit more shadow on hover */
+    font-size: 18px; /* Increase font size on hover */
+    color: aqua;
+}
+header:hover {
+    transform: scale(1.05); /* Scale the header on hover for a 3D effect */
+    box-shadow: 0px 0px 40px 0px #000; /* Increase the box shadow on hover */
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: absolute;
+}
+
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for the desired opacity */
+    z-index: 1; /* Ensure the overlay is above the video */
+}
+
+
+#main {
+    position: relative;
+    z-index: 2; /* Ensure it's above the video and other elements */
+    color: #333; /* Set text color */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the page1 content */
+#page1 {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0); /* Add a semi-transparent background */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the bottom */
+    flex-direction: column;
+}
+
+#page1 h1, #page1 p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffffce; /* Set the text color to contrast with the shadow */
+    margin: 0;
+    position: relative;
+}
+/*ANURAG SINHA
+/*INTERN @SAIL 2023*/
+#page1 h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px; /* Adjust the font size as needed */
+    text-shadow: 10px 10px 15px #000; /* Add a 3D shadow effect to the text */
+    color: #ffffffb0;
+}
+#page1 h2{
+   color: #ffffffb0;
+    text-shadow: 2px 2px 5px #000
+}
+#page1 p {
+    color: #ffffffb0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px; /* Adjust the font size as needed */
+    text-shadow: 2px 2px 5px #000; /* Add a 3D shadow effect to the text */
+}
+
+
+#text {
+    margin-top: auto; /* Push the text to the top of the remaining space */
+}
+/*ANURAG SINHA
+/*INTERN @SAIL 2023*/
+#page1 h1{
+    font-size: 65px;
+    font-weight: 500;
+}
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: safe;
+align-items: center;
+    flex-direction: column;
+    background-color: #141111e5; /* Background color for page 2 */
+    padding: 20px; /* Add padding to separate content from edges */
+    color: #ffffffc9; /* Text color for page 2 */
+    position: relative;
+    z-index: 2;
+}
+/* Style for the content container */
+.content {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color for the content */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #333; /* Text color */
+}
+
+/* Style for headings (h3) */
+.content h3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-top: 20px; /* Add margin to separate headings */
+}
+
+/* Style for paragraphs (p) */
+.content p {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-bottom: 10px; /* Add margin to separate paragraphs */
+}
+
+/* Style for bullet points */
+.content ul {
+    list-style-type: disc; /* Use bullets for lists */
+    margin-left: 20px; /* Add left margin for indentation */
+}
+
+/* Style for list items */
+.content li {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-bottom: 10px; /* Add margin to separate list items */
+}
+
+
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Add this CSS to remove the underline from the links */
+.no-underline {
+    text-decoration: none;
+}
+/*ANURAG SINHA
+/*INTERN @SAIL 2023*/
+#page2 img {
+    height: 200px;
+    width: 930px;
+    opacity: 0.7; /* Adjust the opacity value (0.0 to 1.0) for the desired level of transparency */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.285); /* Adjust the box-shadow values for the 3D effect */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+#page2 h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#internship-info {
+    background-color: #f0f0f03c; /* Background color of the text box */
+    padding: 20px; /* Padding around the text box content */
+    border: 5px solid #ccc; /* Border around the text box */
+    border-radius: 5px; /* Rounded corners for the text box */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.458); /* Box shadow for a subtle lift */
+}
+
+#internship-info h2 {
+    font-weight: bold;
+    color: antiquewhite; 
+}
+/*ANURAG SINHA
+/*INTERN @SAIL 2023*/
+#internship-info ul {
+    list-style-type: disc; /* Use bullets for list items */
+    margin-left: 20px;
+    color: #f4f4f4; /* Indent the list items */
+}
+#internship-info h3 {
+color: #f4f4f4;
+}
+
+#internship-info p {
+    margin-bottom: 10px; 
+color: #ccc;}
+
+#img2 {
+    width: 100%; /* Adjust the width as needed */
+    text-align: center; /* Center the image horizontally */
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  #img2 img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    border: 1px solid #ccc; /* Add a border around the image */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+  }
+  #page3 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#footer {
+    width: 98vw; /* Extend across the entire width of the viewport */
+    background-color: #000000a0;
+    font-weight: 400;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Center the text horizontally */
+}
+
+
